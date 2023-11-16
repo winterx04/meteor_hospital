@@ -1,0 +1,659 @@
+/* Progressbar */
+.progressbar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  counter-reset: step;
+  margin: auto;
+  padding: 0 80px;
+}
+
+
+.progressbar::before,
+.progress {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 6px;
+  width: calc(100% - 180px);
+  background-color: #DDF3FF;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: -1;
+  align-items: center;
+  justify-content: center;
+}
+
+.progress {
+  background-color: var(--primary-color);
+  width: 0%;
+  transition: 0.3s;
+}
+
+.progress-step {
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: #ddf3ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.progress-step::before {
+  counter-increment: step;
+  content: counter(step);
+}
+
+.progress-step::after {
+  content: attr(data-title);
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  font-size: 0.85rem;
+  color: #666;
+}
+
+.progress-step-active {
+  background-color: var(--primary-color);
+  color: #e32323;
+}
+
+
+
+/* Custom CSS Styles */
+.side-by-side {
+  display: inline-block;
+  width: 48%;
+  margin-right: 2%;
+}
+
+.container-appointment {
+  background-color: #F4F4F4;
+  border-radius: 8px;
+  padding-top: 80px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 50px;
+}
+
+.container-form {
+  padding: 75px;
+  overflow: hidden;
+  min-height: 410px;
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+
+.container-consultation {
+  background-color: #F4F4F4;
+  border-radius: 8px;
+  padding-top: 80px;
+  padding-left: 150px;
+  padding-right: 150px;
+  padding-bottom: 50px;
+  
+}
+
+.text-center-appointment {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.choose-buttons {
+  padding-bottom: 30px;
+}
+
+.btn-appointment {
+  background-color: #fff;
+  border: 1px solid #A6A6A6;
+  height: 200px;
+  width: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Push the image to the top */
+  text-align: center; /* Center-align the text */
+  border-radius: 12px;
+  transition: background-color 0.3s, color 0.3s;
+  overflow: hidden;
+}
+
+.btn-appointment:hover {
+  background-color: #0fa3a8; /* Change background color to green on hover */
+  color: #fff; /* Change text color to white on hover */
+}
+
+.btn-appointment .after {
+  opacity: 0; /* Initially set the white image to be hidden */
+}
+
+.btn-appointment:hover .before {
+  opacity: 0; /* Hide the original image on hover */
+}
+
+.btn-appointment:hover .after {
+  opacity: 1; /* Display the white image on hover */
+}
+.btn-appointment .before,
+.btn-appointment .after {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  position: absolute;
+  transition: opacity 0.3s; /* Add opacity transition for smooth hover effect */
+}
+
+.btn-appointment h5 {
+  font-weight: 400;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
+
+.btn-appointment span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.note {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.container-color {
+  background-color: #F4F4F4;
+  border-radius: 8px;
+  padding: 75px;
+  overflow: hidden;
+  min-height: 410px;
+}
+
+
+
+.dob input[type=date] {
+  color-scheme: light;
+}
+
+.dob input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.banner-telemedicine {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/banner-telemedicine.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.date-time input[type=date] {
+  color-scheme: light;
+}
+
+.date-time input[type=date]:focus::-webkit-datetime-edit {
+  color: black !important;
+}
+
+.telemedicine-form-group {
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 20px;
+}
+
+.label-telemedicine {
+  font-size: 1.1em;
+}
+
+.payment-success p{
+  padding-left: 50px;
+}
+
+.custom-btn {
+  background-color: #0F88A8;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px; /* Adjust margin as needed */
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: large;
+  width: 200px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+}
+
+.custom-btn-done {
+  background-color: #ddf3ff;
+  border: 1px solid #0f88a8;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 10px; /* Adjust margin as needed */
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: large;
+  width: 200px;
+  display: inline-block;
+  color: #243D54;
+  text-decoration: none;
+}
+
+.custom-btn:hover {
+  background-color: #0c7b81; /* Change color on hover if desired */
+}
+
+/* ----- Donation css ----- */
+.title {
+  font-size: 25px;
+  margin-bottom: 20px;
+  text-align: center;
+  padding: 20px;
+}
+
+.title h1 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+.info-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
+.info-section {
+  text-align: center;
+  margin: 20px;
+  max-width: 300px;
+}
+
+.info-section img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.donation-image-title {
+  color: #0fa3a8;
+  font-weight: bold;
+  font-style: italic;
+  margin-top: 10px;
+}
+
+.info-section p {
+  padding: 10px;
+}
+
+.submit-div {
+  display: flex;
+  margin: 10px auto;
+  width: 100%;
+  justify-content: center;
+}
+
+.submit-div .donate-button {
+  margin-bottom: 55px;
+  width: 35%;
+  padding: 15px 35px;
+  border-radius: 10px;
+  border: #0fa3a8;
+  background-color: #0fa3a8;
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.submit-div .donate-button:hover {
+  background-color: #0D7376;
+  cursor: pointer;
+}
+
+
+
+/* ----- Make-appointment css ------ */
+.button-container {
+  text-align: center;
+  align-items: center;
+}
+
+/* .prev-button, .next-button {
+  background-color: #0fa3a8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  margin: 40px;
+  cursor: pointer;
+  font-size: large;
+  width: 200px;
+} */
+
+.dropdown-container {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+
+.dropdown-container select {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width as needed */
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.image-title {
+  color: #0fa3a8;
+  font-weight: bolder;
+  margin-top: 1%;
+
+}
+
+.container-color-choose-card {
+  background-color: #F4F4F4;
+  border-radius: 8px;
+  padding: 75px;
+  overflow: hidden;
+  min-height: 410px;
+}
+
+.container-color-choose-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.image-title {
+  color: #0fa3a8;
+  font-weight: bolder;
+  margin-top: 10px;
+}
+
+.card p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.make-appointment-button,.book-appointment-button, .print-appointment-button {
+  background-color: #0fa3a8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 300px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: large;
+}
+
+.make-appointment-button:hover {
+  background-color: #136569;
+}
+
+
+/* ----- Select Doctor ----- */
+
+.doctor-card {
+  display: flex;
+  background: linear-gradient(180deg, #EEFFFF, #FFFFFF);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 10px;
+  border-radius: 15px;
+  border: 0.5px solid #A6A6A6;
+}
+
+.doctor-card-no-color {
+  display: flex;
+  background-color: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 200px;
+  margin-right: 200px;
+  padding: 10px;
+
+}
+
+.doctor-image {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.book-appointment {
+  display: flex;
+}
+
+.doctor-details {
+  flex: 2.5;
+  padding: 20px;
+}
+
+.doctor-image img {
+  width: 180px;
+  height: 200px;
+  object-fit: cover;
+  float: left;
+  border: 1px solid black ;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-bottom: 5%;
+  justify-content: center;
+}
+
+.doctor-image-confirmed img {
+  width: 200px;
+  height: 280px;
+  object-fit: cover;
+  float: left;
+  border: 1px solid black ;
+  margin-top: 5%;
+  margin-left: 7%;
+  margin-bottom: 5%;
+  margin-right: 10px;
+  justify-content: center;
+}
+
+.doctor-specialty {
+  color: #0fa3a8;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.doctor-name {
+  margin: 0;
+  font-weight: bold;
+}
+
+.view-profile-button {
+  background-color: #BDE3E6;
+  color: #0f88a8;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  width: 200px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: large;
+}
+
+/* ----- Book Appointment ------ */
+
+.book_appointment input[type="date"] , .time {
+  width: 100%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* ----- Confirm Appointment ----- */
+
+.edit-button, .confirm-button {
+  background-color: #0fa3a8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 40px;
+  margin-bottom: 5px;
+  margin: 40px;
+  cursor: pointer;
+  font-size: large;
+  width: 200px;
+}
+
+/* ---- Donation-detail ------ */
+.donation-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.details-card, .payment-card {
+  width: 40%; 
+  padding: 20px;
+  background-color: #f2f2f2;
+  margin: 10px;
+  text-align: center;
+  height: 700px;
+  border-radius: 20px;
+  border: 0.25px solid #A6A6A6;
+}
+
+.donation-amount {
+  display: flex;
+  flex-direction: column;
+  align-items: right;
+  padding:0%;
+}
+
+
+.donation-buttons {
+  display: flex;
+  justify-content: space-around; 
+  width: 100%; 
+}
+
+.donation-button {
+  background-color: #0f88a8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+  width: 130px;
+  height: 40px;
+  /* margin: 5px; */
+  align-items: center;
+}
+
+.donation-button:hover {
+  background-color: #0D7376;
+}
+
+.donation-detail input[type="text"],
+.donation-detail input[type="number"],
+.donation-detail input[type="email"],
+.donation-detail textarea {
+  width: 80%;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 5px;
+  margin: 3px 0;
+}
+
+.payment-type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.payment-btn:hover{
+  background: #76593E; 
+  border: 2px solid white; 
+}
+
+.payment-btn {
+  background: linear-gradient(180deg, #FFFFFF, #DBDBDB);
+  color: black;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 2px solid #84502F; 
+  width: 80%;
+  border-radius: 10px;
+  padding: 10px; 
+  margin: 3px 0;
+  text-align: left;
+}
+
+.payment-btn:hover::after{
+  background-color: #76593E; 
+  border: 2px solid white; 
+}
+
+.donate-now-button {
+  background-color: #0fa3a8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 110px;
+  font-weight: 700;
+  font-size: large;
+}
+
+.donation-input {
+  padding-bottom: 20px;
+}
+
+.selected {
+  background-color: #0D7376;
+}
+
+.btn-secondary {
+  color: #000;
+}
+
+.doctor-card {
+  margin-bottom: 20px;
+}
+
+.card {
+  height: 100%; /* Set a fixed height for the card */
+}
+
+.card-img-container {
+  height: 200px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide any overflow beyond the fixed height */
+}
+
+.card-img-top {
+  width: 100%; /* Make the image fill the container width */
+  height: auto; /* Maintain the aspect ratio */
+}

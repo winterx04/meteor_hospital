@@ -1,0 +1,173 @@
+body {
+  background-color: #e9f2f2;
+}
+
+.banner-make-appointment {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 400px;
+  background-image: url("images/appointment_header.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-appointment-list {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 230px;
+  background-image: url("images/admin-appointment.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-doctors {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/banner-doctors.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.breadcrumb-div{
+  width: 100%;
+  padding: 30px;
+  padding-left: 100px;
+}
+.breadcrumb-div p a, .breadcrumb-div p {
+  font-size:16px;
+  text-decoration:none;
+  color:#243d54;
+}
+.breadcrumb-div p a:hover {
+  text-decoration: underline;
+}
+.selected-page{
+  font-weight: 700;
+}
+
+/* Banner-Text-Division */
+.banner-text{
+  width: 100%;
+  padding-left: 100px;
+}
+
+/* Text Inside Banner */
+.page-title{
+  font-size: 50px;
+  font-weight: 700;
+  color: #34597a;
+}
+.page-text{
+  font-size: 17px;
+  padding-top:12px;
+  color: #23668b;
+}
+
+.learn-more {
+  border-radius: 50px; /* You can adjust the value for your desired roundness */
+  padding: 10px;
+  width: 150px;
+  font-weight: 600;
+  border-color: #243D54;
+}
+
+.learn-more:hover {
+  background-color: #0FA3A8 !important; /* Blue color on hover */
+  color: white !important;
+  border-color: #0FA3A8;
+}
+
+.about-us {
+  margin-top: 30px;
+  padding-top: 50px;
+  background-image: url("images/about-us-bg.png");
+  background-size: cover;
+  background-position: center;
+  align-items: center;
+  padding-left: 210px;
+  padding-bottom: 0px;
+  margin-bottom: 0;
+  height: 600px;
+}
+
+.about-us-side-img img{
+  width: 650px;
+  height: 550px;
+  padding-bottom: 0px;
+}
+
+btn-learn-more-index {
+  margin-bottom: 30px;
+}
+
+.logo-img-index img {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.medicine-card {
+  margin: 10px 0;
+}
+
+.banner-specialist {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/banner-specialist.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-medicine {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/banner-medicine.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-donation {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 300px;
+  background-image: url("images/banner-donation.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.digits-results {
+  margin-top: 80px;
+}
+
+.digits-results-text h2{
+  font-weight: 700;
+}
+
+.digits-results-text p{
+  font-size: 20px;
+  color: black;
+}
+
+.spaces-for-text {
+  margin: 0 50px;
+}
+
+.logo-img-index h2 {
+  font-weight: 800;
+  color: #617986;
+  font-size: 40px;
+}
+
+.logo-img-index h6 {
+  color: #0FA3A8;
+  font-weight: 500;
+}
